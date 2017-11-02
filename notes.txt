@@ -1,0 +1,33 @@
+1. 	first used a svm with c = 1, gamma = 1, the data was trained made with a dumb
+   	AI that searched for nearest red square.
+
+   	Although the scores were around 30% for predictions, the svm performed poorly
+   	often getting stuck and missing red squares next to it, data consisted of
+	around 500 features images and labels, these "images" were 12,12 matrixes
+	for object position, one problem was the machine getting stuck, this may
+	be due to the way which the dumb ai frequently changes direction
+
+	things for future:
+		better classifier parameters
+		revise dumb to stop frequent direction changes
+		increase data resolution
+
+2.	used a grid svm using 5 c and 5 gamma paramters, grid size was 24
+	results were more poor than the previous, this is probably due to the
+	frequent changes in direction of the dumb ai making data hard to classify
+
+3.	after changing the dumb ai to stop jittering the grid search classifier
+	shows good results, its able to capture some squares but does eventually 
+	become stuck
+
+4.	with a image set of 10000 the svm, grid svm, and tree perform very will
+	with random froest getting the most of 85% accuracy, performance in simulation
+	is also very well
+	As for the sigmoidNN results peak at about 82%, its possible that it is bottlenecked
+	by data
+
+5. 	Data size has been increased to 20000 and later 35000, however results are the same
+	a new FFNN has been added but results haven't been too great either, MAJOR change
+	is that more than 1 point has been added per data, intiially it was limited to 3
+	but when put into an enviorment with more than 3 all performed well
+
